@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import * as BooksAPI from './BooksAPI'
+import Book from './Book'
 
 
 
@@ -16,13 +17,18 @@ class SearchBooks extends React.Component {
     this.setState({ query: query.trim() })
 	};
 	
+
 	
 	state = {
-		query: ' '
+		query: ''
 	}
+	
+	
 	
 	render() {
 		const { query } = this.state
+		
+		
 		
 		return(
 			<div className="search-books">
